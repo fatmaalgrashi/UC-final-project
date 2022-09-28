@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Push Workout",
+        "duration": 30,
+        "category": "Chest",
+        "notes": "Hold the down pushup postion for 2 seconds",
+        "calories": 100,
+        "exercises": [
+            {"id": "EABD9B9A-4E13-4CD7-93AA-017DCD918D41", "name": "pushups", "category": "Chest", "muscles": "Pectoralis Major, Triceps Brachii, Anterior Deltoid", "equipment": "None (Bodyweight)", "description": "Hold down plank position for better results"},
+            {"id": "EABD9B9A-4E13-4CD7-93AA-017DCD918D42", "name": "bench press", "category": "Chest", "muscles": "Pectoralis Major, Triceps Brachii, Serratus Anterior", "equipment": "Barbell, Bench", "description": "Lying on back, slowly bring the bar down and back up"}
+        ]
+    },
+    {
+        "name": "Leg Workout",
+        "duration": 10,
+        "category": "Legs",
+        "notes": "Stop squats if you can't maintain proper form.",
+        "calories": 25,
+        "exercises": [
+            {"id": "EABD9B9A-4E13-4CD7-93AA-017DCD918D43", "name": "squats", "category": "Legs", "muscles": "Quadriceps Femoris, Gluteus Maximus, Gastrocnemius, Rectus Abdominis, Obliquus Externus Abdominis", "equipment": "None (Bodyweight)", "description": "Hold down plank position for better results"}
+        ]
+    }
+]

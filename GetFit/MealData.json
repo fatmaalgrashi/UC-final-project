@@ -1,0 +1,50 @@
+[
+    {
+        "category": "Breakfast",
+        "calories": 800,
+        "mealContents": "Coffee, Pancakes, Bacon",
+        "timeOfMeal": "2020-01-20T15:58:17Z",
+        "protein": 20.0,
+        "carbs": 100.0,
+        "fats": 30.0,
+        "photoFileName": "Breakfast",
+        "photoUrl": "Dinner",
+        "hasPhotoUrl": 0
+    },
+    {
+        "category": "Lunch",
+        "calories": 950,
+        "mealContents": "Hamburger, Fries, Protein Shake",
+        "timeOfMeal": "2020-01-20T15:58:17Z",
+        "protein": 50.0,
+        "carbs": 25.0,
+        "fats": 20.0,
+        "photoFileName": "Lunch",
+        "photoUrl": "Dinner",
+        "hasPhotoUrl": 0
+    },
+    {
+        "category": "Dinner",
+        "calories": 1200,
+        "mealContents": "12 oz Ribeye, baked potatoe, corn, 2 rolls",
+        "timeOfMeal": "2020-01-20T15:58:17Z",
+        "protein": 56.0,
+        "carbs": 40.0,
+        "fats": 40.0,
+        "photoFileName": "Dinner",
+        "photoUrl": "Dinner",
+        "hasPhotoUrl": 0
+    },
+    {
+        "category": "Snack",
+        "calories": 200,
+        "mealContents": "Snickers Bar",
+        "timeOfMeal": "2020-01-20T15:58:17Z",
+        "protein": 6.0,
+        "carbs": 20.0,
+        "fats": 5.0,
+        "photoFileName": "Snack",
+        "photoUrl": "Dinner",
+        "hasPhotoUrl": 0
+    }
+]

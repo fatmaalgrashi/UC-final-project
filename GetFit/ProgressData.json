@@ -1,0 +1,51 @@
+[
+    {
+        "date": "2020-01-20T15:58:17Z",
+        "weight": 155.0,
+        "photoFileName": "weigh1",
+        "photoUrl": "weigh1",
+        "hasPhotoUrl": 0
+    },
+    {
+        "date": "2020-02-20T15:58:17Z",
+        "weight": 150.0,
+        "photoFileName": "weigh2",
+        "photoUrl": "weigh2",
+        "hasPhotoUrl": 0
+    },
+    {
+        "date": "2020-03-20T15:58:17Z",
+        "weight": 145.0,
+        "photoFileName": "weigh3",
+        "photoUrl": "weigh3",
+        "hasPhotoUrl": 0
+    },
+    {
+        "date": "2020-04-20T15:58:17Z",
+        "weight": 140.0,
+        "photoFileName": "weigh4",
+        "photoUrl": "weigh4",
+        "hasPhotoUrl": 0
+    },
+    {
+        "date": "2020-05-20T15:58:17Z",
+        "weight": 135.0,
+        "photoFileName": "weigh5",
+        "photoUrl": "weigh5",
+        "hasPhotoUrl": 0
+    },
+    {
+        "date": "2020-06-20T15:58:17Z",
+        "weight": 130.0,
+        "photoFileName": "weigh6",
+        "photoUrl": "weigh6",
+        "hasPhotoUrl": 0
+    },
+    {
+        "date": "2020-06-20T15:58:17Z",
+        "weight": 120.0,
+        "photoFileName": "weigh7",
+        "photoUrl": "weigh7",
+        "hasPhotoUrl": 0
+    }
+]
