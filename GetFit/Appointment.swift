@@ -13,7 +13,7 @@ struct Appointment: View {
     @State var index = 0
     @Binding var date : Date
     @Binding var appointments : [String]
-    @Binding var discription : String
+    @Binding var description : String
 
 
     var body: some View {
@@ -65,11 +65,11 @@ struct Appointment: View {
 
                         
                         if self.index == 0{
-                            UpcomingView( appointments: self.$appointments, date: $date, discription: $discription)
+                            UpcomingView( appointments: self.$appointments, date: $date, description: $description)
                         }else{
                             PreviousView(date: date)
                         }
-                NavigationLink(destination: AppointmentDetails(date : $date, discription: $discription, appointments : self.$appointments)){
+                NavigationLink(destination: AppointmentDetails(date : $date, description: $description, appointments : self.$appointments)){
                     Text("add an appointment")}.padding()
 //                    }
 //                }
@@ -87,7 +87,7 @@ struct UpcomingView : View{
 
     @Binding var appointments : [String]
     @Binding var date : Date
-    @Binding var discription : String
+    @Binding var description : String
 
     var body : some View{
         
@@ -95,7 +95,7 @@ struct UpcomingView : View{
             VStack{
                
                 List(appointments, id:\.self){ appointment in
-                    NavigationLink(destination:AppointmentDetails(date: $date, discription: $discription, appointments: self.$appointments)){
+                    NavigationLink(destination:AppointmentDetails(date: $date, description: $description, appointments: self.$appointments)){
                         VStack{
                             Text(appointment)
                         }

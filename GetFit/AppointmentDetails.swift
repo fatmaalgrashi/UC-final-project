@@ -10,7 +10,7 @@ import SwiftUI
 struct AppointmentItem: Identifiable{
     let id = UUID()
     @Binding var  date: Date
-    @Binding var  discription : String
+    @Binding var  description : String
 
 }
 struct AppointmentDetails: View {
@@ -18,7 +18,7 @@ struct AppointmentDetails: View {
 
     @Binding var date : Date
     @State var isChecked = true
-    @Binding var discription : String
+    @Binding var description : String
     @State var newItem : String = ""
     @State var items : [String] = []
 //    @Binding var appointments : [String]
@@ -32,13 +32,13 @@ struct AppointmentDetails: View {
 //                        Section(header: Text("appointment details")){
                            
                     DatePicker("select a date", selection: $date, displayedComponents: .date)
-                    TextField("add a discription", text: $discription)
+                    TextField("add a description", text: $description)
                             
 //                        }
                         .toolbar{
                             ToolbarItemGroup(placement: .navigationBarTrailing){
                              
-                                NavigationLink (destination: Appointment(index: 0, date: $date, appointments: self.$appointments, discription: $discription)){
+                                NavigationLink (destination: Appointment(index: 0, date: $date, appointments: self.$appointments, description: $description)){
                                     Button(action: {
                                         appointments.append("\(date)")
 //                                        UpcomingView(appointments.append("\(AppointmentDetails(date: date))"))

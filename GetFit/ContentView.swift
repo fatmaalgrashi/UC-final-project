@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var insulinSensitivity: String = ""
     @State var date : Date = Date()
     @State var appointments : [String] = [""]
-    @State var discription : String = ""
+    @State var description : String = ""
 
 
     var body: some View {
@@ -33,7 +33,7 @@ struct ContentView: View {
                     Image(systemName: "heart")
                     Text("Nutrition")
                 }
-            Appointment(date: $date, appointments: self.$appointments, discription: $discription)
+            Appointment(date: $date, appointments: self.$appointments, description: $description)
                 .tabItem {
                     Image(systemName: "calendar")
                     Text("Appointments")
