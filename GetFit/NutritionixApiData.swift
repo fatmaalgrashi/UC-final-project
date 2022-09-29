@@ -326,7 +326,7 @@ public func getNutritionDataFromApi(upc: String) {
             //--------------------------
             
             if let nf_total_carbohydrate = foodsJsonObject["nf_total_carbohydrate"] as? Double {
-                total_carbohydrate = "\(nf_total_carbohydrate) grams"
+                total_carbohydrate = "\(nf_total_carbohydrate)"
             }
            
             //------------------------

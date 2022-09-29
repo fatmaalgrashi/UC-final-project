@@ -9,9 +9,16 @@
 import SwiftUI
  
 struct ContentView: View {
+    @State var carRatio: String = ""
+    @State var insulinSensitivity: String = ""
+    @State var date : Date = Date()
+    @State var appointments : [String] = [""]
+    @State var discription : String = ""
+
+
     var body: some View {
         TabView {
-            ProfileView()
+            ProfileView(insulinSensitivity: $insulinSensitivity, carbRatio: $carRatio)
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Profile")
@@ -21,11 +28,17 @@ struct ContentView: View {
 //                    Image(systemName: "figure.walk")
 //                    Text("Workout")
 //                }
-            Nutrition()
+            Nutrition(carbRatio: $carRatio, insulinSensitivity: $insulinSensitivity)
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Nutrition")
                 }
+            Appointment(date: $date, appointments: self.$appointments, discription: $discription)
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Appointments")
+                }
+         
 //            SearchGym()
 //                .tabItem {
 //                    Image(systemName: "magnifyingglass")
@@ -49,6 +62,7 @@ struct ContentView: View {
 }
  
 struct ContentView_Previews: PreviewProvider {
+
     static var previews: some View {
         ContentView()
     }

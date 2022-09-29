@@ -11,6 +11,16 @@ import SwiftUI
 struct Nutrition: View {
     
     @State var foodUnits = ""
+    @Binding var carbRatio: String
+    @Binding var insulinSensitivity: String
+    @State var image = Image(systemName: "plus.circle")
+    @State var isTapped = false
+    @State var currentBloodSugar = ""
+    @State var topTarget = ""
+    @State var correctionUnits = ""
+
+
+
     
     var body: some View {
         NavigationView {
@@ -19,7 +29,7 @@ struct Nutrition: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-                        TextField("units per seving", text : $foodUnits)
+//                        TextField("units per seving", text : $foodUnits)
                         // Show Meal tracker view
 //                        NavigationLink(destination: MealTracker()) {
 //                            HStack {
@@ -36,7 +46,7 @@ struct Nutrition: View {
 //                        .padding()
                         
 //                        show food barcode scanner view
-                        NavigationLink(destination: ScanFoodBarcode()) {
+                        NavigationLink(destination: ScanFoodBarcode( carbRatio: $carbRatio)) {
                             HStack {
                                 Image(systemName: "barcode.viewfinder")
                                     .imageScale(.medium)
@@ -64,7 +74,62 @@ struct Nutrition: View {
                             .frame(minWidth: 300, maxWidth: 500,  alignment: .leading)
                         }
                         .padding()
-                        
+                        Spacer()
+                        HStack{
+                            
+                            image
+                                .imageScale(.medium)
+                                .font(Font.title.weight(.regular))
+//                                .foregroundColor(.blue)
+                                .frame(width: 60)
+//                                .font(.system(size: 25))
+                                .foregroundColor(isTapped ? .red : .green)
+//                                .multilineTextAlignment(.leading)
+                                .onTapGesture {
+                                    withAnimation(.easeOut(duration: 0.5)){
+                                        isTapped.toggle()
+                                    }
+                                
+                                    
+                                    image = isTapped ? Image(systemName: "minus.circle") : Image(systemName: "plus.circle")
+                                }
+                            
+                            Text("Blood sugar correction")
+                                .font(.system(size: 20))
+                            
+                           
+                            
+                        }.frame(minWidth: 300, maxWidth: 500,  alignment: .leading)
+                        .padding()
+                        TextField(isTapped ? "enter your current blood sugar" : "", text: $currentBloodSugar)
+                            .padding()
+                            .frame(width: 350, height: 50)
+                            .background(isTapped ? Color.gray.opacity(0.3) : Color.clear)
+                            .cornerRadius(10)
+
+                            .padding()
+                        TextField(isTapped ? "enter top targetted blood sugar level" : "", text: $topTarget)
+                            .padding()
+                            .frame(width: 350, height: 50)
+                            .background(isTapped ? Color.gray.opacity(0.3) : Color.clear)
+                            .cornerRadius(10)
+                            .padding()
+                        Button(action: {
+                            correctionUnits = "you need \(CalculateCorrectionUnit(currentBloodSugar: currentBloodSugar, topTarget: topTarget, insulinSensitivity: insulinSensitivity)) units"
+                            currentBloodSugar = ""
+                            topTarget = ""
+                            
+                        }){
+                                Text(isTapped ? "calculate" : "")
+                                
+                            }
+                        .padding()
+                        Text(isTapped ? correctionUnits : "")
+                            .font(.system(size: 25))
+                            .bold()
+                            .foregroundColor(.red)
+                            .padding()
+
 //                        Text("Powered By")
 //                            .font(.headline)
 //                            .padding(.top, 30)
@@ -89,11 +154,17 @@ struct Nutrition: View {
         
     }
 }
+func CalculateCorrectionUnit(currentBloodSugar: String, topTarget: String, insulinSensitivity: String) -> Double {
+    let cbs = Double(currentBloodSugar) ?? 0
+    let tt = Double(topTarget) ?? 0
+    let i = Double(insulinSensitivity) ?? 0
 
-struct Nutrition_Previews: PreviewProvider {
-    static var previews: some View {
-        Nutrition()
-    }
+    return (cbs - tt)/i
 }
+//struct Nutrition_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Nutrition()
+//    }
+//}
 
 

@@ -1,38 +1,42 @@
 {
   "images" : [
     {
-      "filename" : "IMG_0533.jpg",
+      "filename" : "Untitled_Artwork 16.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "IMG_0533 2-2.jpg",
+      "filename" : "Untitled_Artwork 16-1.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Untitled_Artwork 16-2.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     },
     {
-      "filename" : "IMG_0533 2.jpg",
+      "filename" : "Untitled_Artwork 16-7.jpg",
       "idiom" : "iphone",
       "scale" : "1x"
     },
     {
+      "filename" : "Untitled_Artwork 16-6.jpg",
       "idiom" : "iphone",
       "scale" : "2x"
     },
     {
+      "filename" : "Untitled_Artwork 16-5.jpg",
       "idiom" : "iphone",
       "scale" : "3x"
     },
     {
-      "filename" : "IMG_0533 2-1.jpg",
+      "filename" : "Untitled_Artwork 16-3.jpg",
       "idiom" : "mac",
       "scale" : "1x"
     },
     {
+      "filename" : "Untitled_Artwork 16-4.jpg",
       "idiom" : "mac",
       "scale" : "2x"
     }

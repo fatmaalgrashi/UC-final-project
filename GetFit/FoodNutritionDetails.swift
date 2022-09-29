@@ -160,7 +160,7 @@ struct FoodNutritionDetails: View {
                                     if self.inputDataValidated() {
                                         
                                         unitAlert = true
-                                         print("\(carbRatio)")
+                                        print("\(foodItem.totalCarbohydrate)")
 //                                        self.saveNewMeal()
 //                                        self.showMealAddedAlert = true
                                     } else {
@@ -171,7 +171,7 @@ struct FoodNutritionDetails: View {
                                 }) .alert(isPresented: $unitAlert, content: {
 //                                    Alert(title: Text("you need\(calculateUnit(totalCarbohydrate:Double(foodItem.totalCarbohydrate) ?? 1.0, mealServings: Double(mealServings) , carbRatio:Double(self.carbRatio) ?? 1.0))")
 //                                    Alert(title: Text("you need\(calculateUnit(totalCarbohydrate: Double(foodItem.totalCarbohydrate) ?? 0, mealServings:Double(mealServings) ?? 0, carbRatio: Double( $carbRatio.wrappedValue) ?? 0))"))
-                                    Alert(title: Text("you need\(carbRatio)"))
+                                    Alert(title: Text("you need \(( calculateUnit(totalCarbohydrate: foodItem.totalCarbohydrate, mealServings: "\(mealServings)", carbRatio: carbRatio)), specifier: "%.1f") units") )
                                  
                                     
                                 })
@@ -314,7 +314,17 @@ struct FoodNutritionDetails_Previews: PreviewProvider {
         FoodNutritionDetails(barcode: .constant(""), carbRatio: carbRatio)
     }
 }
-func calculateUnit(totalCarbohydrate : Double, mealServings: Double, carbRatio : Double) -> Double{
-    return totalCarbohydrate * mealServings * carbRatio
+func calculateUnit(totalCarbohydrate : String, mealServings: String, carbRatio : String) -> Double{
+    let c = Double(totalCarbohydrate) ?? 1.0
+    let m = Double(mealServings) ?? 1.0
+    let r = Double(carbRatio) ?? 1.0
+    
+    print("❌❌❌")
+    print(c)
+    print(m)
+    print(r)
+    print("❌❌❌")
+    
+    return c * m / r
 //    / carbRatio
 }

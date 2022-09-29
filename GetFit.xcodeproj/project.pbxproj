@@ -81,6 +81,9 @@
 		B7E1E5402566ADDB003A89E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E1E53F2566ADDB003A89E7 /* Preview Assets.xcassets */; };
 		B7E1E5432566ADDB003A89E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E1E5412566ADDB003A89E7 /* LaunchScreen.storyboard */; };
 		D5AE93F528E2052300E60C4E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE93F428E2052300E60C4E /* ProfileView.swift */; };
+		D5AE93F728E505AA00E60C4E /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE93F628E505AA00E60C4E /* Appointment.swift */; };
+		D5AE940B28E53BD300E60C4E /* EventEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE940A28E53BD300E60C4E /* EventEditView.swift */; };
+		D5AE940D28E5A6E000E60C4E /* AppointmentDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AE940C28E5A6E000E60C4E /* AppointmentDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,7 +178,7 @@
 		B7DEFC35257B14EB00C4F7C6 /* GetFitWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFitWidget.swift; sourceTree = "<group>"; };
 		B7DEFC37257B14EC00C4F7C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7DEFC39257B14EC00C4F7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7E1E5302566ADDA003A89E7 /* GetFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7E1E5302566ADDA003A89E7 /* ProDiabetic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProDiabetic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E1E5332566ADDA003A89E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E1E5352566ADDA003A89E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B7E1E5372566ADDA003A89E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -185,6 +188,9 @@
 		B7E1E5422566ADDB003A89E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7E1E5442566ADDB003A89E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5AE93F428E2052300E60C4E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D5AE93F628E505AA00E60C4E /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		D5AE940A28E53BD300E60C4E /* EventEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditView.swift; sourceTree = "<group>"; };
+		D5AE940C28E5A6E000E60C4E /* AppointmentDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -392,7 +398,7 @@
 		B7E1E5312566ADDA003A89E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B7E1E5302566ADDA003A89E7 /* GetFit.app */,
+				B7E1E5302566ADDA003A89E7 /* ProDiabetic.app */,
 				B7DEFC2E257B14EB00C4F7C6 /* GetFitWidgetExtension.appex */,
 			);
 			name = Products;
@@ -402,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				D5AE93F428E2052300E60C4E /* ProfileView.swift */,
+				D5AE93F628E505AA00E60C4E /* Appointment.swift */,
 				B71AF791256B0F55004C697D /* Take or PIck Photo */,
 				B7252B4D256B024B00B86149 /* Data Model */,
 				B730E700256ADFEB000B3579 /* Food Barcode */,
@@ -414,6 +421,8 @@
 				B7E1E5412566ADDB003A89E7 /* LaunchScreen.storyboard */,
 				B7E1E5442566ADDB003A89E7 /* Info.plist */,
 				B7E1E53E2566ADDB003A89E7 /* Preview Content */,
+				D5AE940A28E53BD300E60C4E /* EventEditView.swift */,
+				D5AE940C28E5A6E000E60C4E /* AppointmentDetails.swift */,
 			);
 			path = GetFit;
 			sourceTree = "<group>";
@@ -446,9 +455,9 @@
 			productReference = B7DEFC2E257B14EB00C4F7C6 /* GetFitWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		B7E1E52F2566ADDA003A89E7 /* GetFit */ = {
+		B7E1E52F2566ADDA003A89E7 /* ProDiabetic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7E1E5472566ADDB003A89E7 /* Build configuration list for PBXNativeTarget "GetFit" */;
+			buildConfigurationList = B7E1E5472566ADDB003A89E7 /* Build configuration list for PBXNativeTarget "ProDiabetic" */;
 			buildPhases = (
 				B7E1E52C2566ADDA003A89E7 /* Sources */,
 				B7E1E52D2566ADDA003A89E7 /* Frameworks */,
@@ -460,9 +469,9 @@
 			dependencies = (
 				B7DEFC3B257B14EC00C4F7C6 /* PBXTargetDependency */,
 			);
-			name = GetFit;
+			name = ProDiabetic;
 			productName = GetFit;
-			productReference = B7E1E5302566ADDA003A89E7 /* GetFit.app */;
+			productReference = B7E1E5302566ADDA003A89E7 /* ProDiabetic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -495,7 +504,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B7E1E52F2566ADDA003A89E7 /* GetFit */,
+				B7E1E52F2566ADDA003A89E7 /* ProDiabetic */,
 				B7DEFC2D257B14EB00C4F7C6 /* GetFitWidgetExtension */,
 			);
 		};
@@ -546,9 +555,11 @@
 				B71AF795256B0F55004C697D /* ImagePicker.swift in Sources */,
 				B7628107257708D900CD860F /* GymItem.swift in Sources */,
 				B7252B4A256B014300B86149 /* MealItem.swift in Sources */,
+				D5AE940B28E53BD300E60C4E /* EventEditView.swift in Sources */,
 				B762811925770BFD00CD860F /* Exercise.swift in Sources */,
 				B730E70F256AE568000B3579 /* Nutrients.swift in Sources */,
 				B730E704256AE052000B3579 /* FoodStruct.swift in Sources */,
+				D5AE940D28E5A6E000E60C4E /* AppointmentDetails.swift in Sources */,
 				B7733DD2256C918900C0E5E5 /* Progress.swift in Sources */,
 				B762812F25770E0A00CD860F /* ExerciseSearchResults.swift in Sources */,
 				B7628105257708C600CD860F /* GymResults.swift in Sources */,
@@ -597,6 +608,7 @@
 				B762813125770E1C00CD860F /* ExerciseStructDetails.swift in Sources */,
 				B762811325770B3100CD860F /* ExerciseStruct.swift in Sources */,
 				B73AD075256D8167007DD5E8 /* ProgressStruct.swift in Sources */,
+				D5AE93F728E505AA00E60C4E /* Appointment.swift in Sources */,
 				B762811D25770C6300CD860F /* WorkoutList.swift in Sources */,
 				B7E1E5382566ADDA003A89E7 /* ContentView.swift in Sources */,
 				B762811F25770CAE00CD860F /* WorkoutDetails.swift in Sources */,
@@ -849,7 +861,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7E1E5472566ADDB003A89E7 /* Build configuration list for PBXNativeTarget "GetFit" */ = {
+		B7E1E5472566ADDB003A89E7 /* Build configuration list for PBXNativeTarget "ProDiabetic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7E1E5482566ADDB003A89E7 /* Debug */,

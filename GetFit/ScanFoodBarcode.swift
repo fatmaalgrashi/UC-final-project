@@ -13,7 +13,7 @@ struct ScanFoodBarcode: View {
    
     // 'barcode' contains the UPC value of the barcode image
     @State var barcode: String = ""
-    @State var carbRatio : String = ""
+    @Binding var carbRatio : String
     // 'lightOn' indicates if the flashlight is turned on or off
     @State var lightOn: Bool = false
    
@@ -70,10 +70,10 @@ struct ScanFoodBarcode: View {
  
 }
  
-struct ScanFoodBarcode_Previews: PreviewProvider {
-    static var previews: some View {
-        ScanFoodBarcode()
-    }
-}
+//struct ScanFoodBarcode_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ScanFoodBarcode()
+//    }
+//}
  
  
